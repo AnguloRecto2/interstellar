@@ -1,5 +1,5 @@
-importScripts('/h/uv.bundle.js');
-importScripts('/h/uv.config.js');
+importScripts('/contact/mathematics.js');
+importScripts('/contact/geography.js');
 
 class UVServiceWorker extends EventEmitter {   
     constructor(config = __uv$config) {
@@ -52,7 +52,7 @@ class UVServiceWorker extends EventEmitter {
         };
     };
     async fetch({ request }) {
-        if (!request.url.startsWith(location.origin + (this.config.prefix || '/astronomy/'))) {
+        if (!request.url.startsWith(location.origin + (this.config.prefix || '/reviews/'))) {
             return fetch(request);
         };
         try {

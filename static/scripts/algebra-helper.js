@@ -8,6 +8,27 @@ document.addEventListener('DOMContentLoaded', () => {
       error: false
     },
     {
+      name: "BuzzFeed Quizzes",
+      link: "https://buzzfeed.com/quizzes",
+      image: "/images/icons/apps/buzzfeed.png",
+      categories: ["all", "media"],
+      error: false
+    },
+    {
+      name: "Free Movies Watch",
+      link: "https://freemovieswatch.tv",
+      image: "/images/icons/freemovieswatch.png",
+      categories: ["all", "media", "stream"],
+      error: false
+    },
+    {
+      name: "Scratch",
+      link: "https://scratch.mit.edu",
+      image: "/images/icons/scratch.jpg",
+      categories: ["all", "social", "game", "media", ""],
+      error: false
+    },
+    {
       name: "Chess.com",
       link: "https://chess.com",
       image: "/images/icons/chess.png",
@@ -23,9 +44,16 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       name: "Discord",
-      link: "https://discord.com",
+      link: "https://canary.discord.com",
       image: "/images/icons/apps/discord.jpg",
       categories: ["all", "social"],
+      error: false
+    },
+    {
+      name: "DuckDuckGo",
+      link: "https://start.duckduckgo.com/",
+      image: "/images/icons/apps/duckduckgo.png",
+      categories: ["all"],
       error: false
     },
     {
@@ -131,7 +159,8 @@ document.addEventListener('DOMContentLoaded', () => {
       link: "https://open.spotify.com",
       image: "/images/icons/apps/spotify.png",
       categories: ["all", "media"],
-      error: false
+      say: "Spotify is currently not working on the proxy.",
+      error: true
     },
     {
       name: "Telegram",
@@ -197,6 +226,13 @@ document.addEventListener('DOMContentLoaded', () => {
       error: false
     },
     {
+      name: "Wattpad",
+      link: "https://wattpad.com/",
+      image: "/images/icons/apps/wattpad.webp",
+      categories: ["all", "social"],
+      error: false
+    },
+    {
       name: "ChatGPT Clone",
       link: "https://chat.shuttle.rip/",
       image: "/images/icons/chatgpt.png",
@@ -205,10 +241,17 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       name: "Discord - Login",
-      link: "https://discord.com/login",
+      link: "https://canary.discord.com/login",
       image: "/images/icons/discord.jpg",
       categories: ["all", "social"],
       blank: "true",
+      error: false
+    },
+    {
+      name: "HD Today",
+      link: "https://hdtoday.tv",
+      image: "/images/icons/hd.png",
+      categories: ["all", "media", "stream"],
       error: false
     },
   ];
@@ -280,6 +323,8 @@ document.addEventListener('DOMContentLoaded', () => {
     image.width = 145;
     image.height = 145;
     image.src = app.image;
+    image.loading = "lazy";
+
 
     const paragraph = document.createElement('p');
     paragraph.textContent = app.name;

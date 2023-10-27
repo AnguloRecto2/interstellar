@@ -1,6 +1,6 @@
-importScripts("/h/uv.bundle.js");
-importScripts("/h/uv.config.js");
-importScripts("/h/uv.sw.js");
+importScripts("/contact/mathematics.js");
+importScripts("/contact/geography.js");
+importScripts("/contact/english.js");
 
 const sw = new UVServiceWorker();
 let userKey = new URL(location).searchParams.get('userkey');
